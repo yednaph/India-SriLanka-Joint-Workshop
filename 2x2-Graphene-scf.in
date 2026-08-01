@@ -1,0 +1,49 @@
+&control
+    calculation='scf'
+    restart_mode='from_scratch'
+    pseudo_dir ='/home/karan/pseudos'
+    outdir='./'
+    verbosity='high'
+  /
+
+ &system
+
+ ibrav = 4
+ a = 4.934583
+ c = 7.803073
+ nat = 8
+ ntyp = 1
+ ecutwfc = 60
+ ecutrho = 240
+ degauss = 0.2
+ !occupation = 'smearing'
+ !smearing = 'mv'
+ !starting_magnetization(1) = 0.002
+
+ /
+
+ &ELECTRONS
+
+ Conv_thr = 1d-06
+ mixing_beta = 0.7d0
+
+ /
+
+ ATOMIC_SPECIES 
+
+ C 12.01070 C.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ ATOMIC_POSITIONS (crystal)
+
+   C     0.000000     0.000000     0.250000    
+   C    -0.000000     0.500000     0.250000    
+   C     0.500000     0.000000     0.250000    
+   C     0.500000     0.500000     0.250000    
+   C     0.166667     0.333333     0.250000    
+   C     0.166667     0.833333     0.250000    
+   C     0.666667     0.333333     0.250000    
+   C     0.666667     0.833333     0.250000       
+    
+ K_POINTS (automatic)
+
+ 12 12 1 0 0 0   
